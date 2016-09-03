@@ -31,3 +31,20 @@ function sizeUpdate() {
 
 $(document).ready(sizeUpdate); // When the page first loads
 $(window).resize(sizeUpdate); // When the browser changes size
+
+
+
+(function(){
+    var linkItem = document.getElementsByClassName('title'), i;
+
+    for ( i = 0; i < linkItem.length; i++ ) {
+
+          linkItem[i].onclick = function() {
+            this.classList.toggle('active');
+            this.nextElementSibling.classList.toggle("show");
+
+            return false;
+          }
+    }
+
+})();
